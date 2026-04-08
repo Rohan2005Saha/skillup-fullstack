@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="dashboard-shell">
+    <div class="dashboard-container">
+      <header class="dashboard-header card">
+        <div>
+          <p class="eyebrow">SkillUp Workspace</p>
+          <h1>Dashboard</h1>
+          <p class="dashboard-subtitle">Manage your profile, update your skills, and explore matches from one clean workspace.</p>
+        </div>
+        <div class="header-actions">
+          <div class="header-badge">Live</div>
+          <button class="btn-secondary logout-button" id="logout-button" type="button">Logout</button>
+        </div>
+      </header>
+
+      <section class="stats-grid">
+        <article class="stat-card card">
+          <span class="stat-label">Profile</span>
+          <strong>Ready</strong>
+          <p>Review your current account details anytime.</p>
+        </article>
+        <article class="stat-card card">
+          <span class="stat-label">Skills</span>
+          <strong>Editable</strong>
+          <p>Keep your stack fresh so matches stay relevant.</p>
+        </article>
+        <article class="stat-card card">
+          <span class="stat-label">Matches</span>
+          <strong>On Demand</strong>
+          <p>Find opportunities with a single click.</p>
+        </article>
+      </section>
+
+      <section class="skills-section card">
+        <div class="section-heading">
+          <h2>Add Skills</h2>
+          <p>Use comma-separated keywords to update your profile.</p>
+        </div>
+        <form id="skills-form">
+          <div class="input-group">
+            <input type="text" id="skills" placeholder="React, Node.js, UI Design">
+            <button class="btn-primary" id="skills-button" type="submit">Update Skills</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="actions-section card">
+        <div class="section-heading">
+          <h2>Quick Actions</h2>
+          <p>Jump straight into the most common tasks.</p>
+        </div>
+        <div class="button-group">
+          <button class="btn-secondary action-button" id="profile-button" type="button">My Profile</button>
+          <button class="btn-secondary action-button" id="users-button" type="button">All Users</button>
+          <button class="btn-secondary action-button" id="matches-button" type="button">Matches</button>
+        </div>
+      </section>
+
+      <section class="output-section card">
+        <div class="section-heading">
+          <h2>Output</h2>
+          <p>Results from your latest action will appear here.</p>
+        </div>
+        <p id="dashboard-message" class="status-message" aria-live="polite"></p>
+        <pre id="output"></pre>
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
